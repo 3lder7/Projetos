@@ -6,47 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
 </head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    body{
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-    }
-    .calculadora{
-        position: absolute;/*Ocupa o próprio espaço*/
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 40px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /*Retira 50% dos eixos X e Y, assim, centralizando*/
-        border-radius: 10px;
-    }
-    .btn{
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-        background-color: rgb(31, 31, 31);
-        border: 0px;
-        color: white;
-        margin: 3px;
-    }
-    .btn:hover{
-        background-color: black;
-    }
-    #res{
-        background-color: white;
-        margin: 5px;
-        height: 30px;
-        color: black; /*cor da fonte*/
-        text-align: right;
-        padding: 5px;
-        font-size: 2em;
-    }
-</style>
+    <link rel="stylesheet" href="style.css">
 <body>
     <div class="calculadora">
             <h1>Calculadora</h1>
@@ -73,20 +33,5 @@
             <div><input type="button" value="C" class="btn" onclick="limpar()"></div>
     </div>
 </body>
-
-<script>
-    function natela(n1){
-        var num = window.document.getElementById('res').innerHTML
-        window.document.getElementById('res').innerHTML = num + n1
-    }
-    function limpar(){
-        res.innerHTML = ''
-    }
-    function calcular(){
-        if(res = true){
-            var res = window.document.getElementById('res').innerHTML
-            window.document.getElementById('res').innerHTML = eval(res)
-        }
-    }
-</script>
+<script src="script.js"></script>
 </html>
