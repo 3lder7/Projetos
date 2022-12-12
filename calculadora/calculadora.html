@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    .calculadora{
+        position: absolute;/*Ocupa o próprio espaço*/
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 40px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /*Retira 50% dos eixos X e Y, assim, centralizando*/
+        border-radius: 10px;
+    }
+    .btn{
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        background-color: rgb(31, 31, 31);
+        border: 0px;
+        color: white;
+        margin: 3px;
+    }
+    .btn:hover{
+        background-color: black;
+    }
+    #res{
+        background-color: white;
+        margin: 5px;
+        height: 30px;
+        color: black; /*cor da fonte*/
+        text-align: right;
+        padding: 5px;
+        font-size: 2em;
+    }
+</style>
+<body>
+    <div class="calculadora">
+            <h1>Calculadora</h1>
+            <div id="res"></div>
+            <input type="button" value="1" class="btn" name="num"  onclick="natela('1')">
+            <input type="button" value="2" class="btn" name="num"  onclick="natela('2')">
+            <input type="button" value="3" class="btn" onclick="natela('3')">
+            <input type="button" value="+" class="btn" onclick="natela('+')">
+            <br>
+            <input type="button" value="4" class="btn" onclick="natela('4')">
+            <input type="button" value="5" class="btn" onclick="natela('5')">
+            <input type="button" value="6" class="btn" onclick="natela('6')">
+            <input type="button" value="-" class="btn" onclick="natela('-')">
+            <br>
+            <input type="button" value="7" class="btn" onclick="natela('7')">
+            <input type="button" value="8" class="btn" onclick="natela('8')">
+            <input type="button" value="9" class="btn" onclick="natela('9')">
+            <input type="button" value="X" class="btn" onclick="natela('*')">
+            <br>
+            <input type="button" value="." class="btn" onclick="natela('.')">
+            <input type="button" value="0" class="btn" onclick="natela('0')">
+            <input type="button" value="=" class="btn" onclick="calcular()">
+            <input type="button" value="/" class="btn" onclick="natela('/')">
+            <div><input type="button" value="C" class="btn" onclick="limpar()"></div>
+    </div>
+</body>
+
+<script>
+    function natela(n1){
+        var num = window.document.getElementById('res').innerHTML
+        window.document.getElementById('res').innerHTML = num + n1
+    }
+    function limpar(){
+        res.innerHTML = ''
+    }
+    function calcular(){
+        if(res = true){
+            var res = window.document.getElementById('res').innerHTML
+            window.document.getElementById('res').innerHTML = eval(res)
+        }
+    }
+</script>
+</html>
