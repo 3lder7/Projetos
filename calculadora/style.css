@@ -17,9 +17,10 @@ body{
     transform: translate(-50%, -50%); /*Retira 50% dos eixos X e Y, assim, centralizando*/
     border-radius: 10px;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 500px){
     .calculadora{
-        width: 50%;
+        position: relative;
+        margin-top: 60%;
     }
 }
 .btn{
